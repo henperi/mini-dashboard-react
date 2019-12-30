@@ -1,0 +1,53 @@
+.sidebar {
+  background-color: #373759;
+  color: #fff;
+  border-radius: 34px;
+  box-shadow: 0 2px 30px 0 #9aa6c9;
+  padding: 30px 0;
+  height: calc(100vh - calc(40px + 1.1%));
+  position: fixed;
+  z-index: 10;
+  overflow-y: scroll;
+}
+
+.icon__item {
+  position: relative;
+  z-index: 1;
+  height: 80px;
+  width: 100%;
+  cursor: pointer;
+
+  .svg {
+    opacity: 0.3;
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:active,
+  &--selected {
+    .item-hover {
+      position: absolute;
+      background-color: #6788ff;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      left: 0%;
+      width: 80%;
+      margin-right: 20%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .svg {
+      opacity: 1;
+    }
+  }
+
+  .item-hover-default {
+    position: absolute;
+    background-color: #6788ff;
+    border-radius: 20px;
+    width: 65px;
+    height: 65px;
+    z-index: -1;
+  }
+}

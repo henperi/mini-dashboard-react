@@ -1,0 +1,31 @@
+.card {
+  // padding: 5px;
+  min-height: 50px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 20px 0px rgba($color: #9aa6c9, $alpha: 0.2);
+
+  &--modified {
+    padding: 25px;
+  }
+
+  &--selected {
+    background: #eef2fa;
+    box-shadow: 0px 2px 20px 0px rgba($color: #9aa6c9, $alpha: 0.5);
+  }
+
+  &--shapeless {
+    filter: none;
+  }
+
+  .mv {
+    &__all {
+      &--20 {
+        margin: 20px;
+      }
+    }
+    &--10 {
+      margin: 10px 0;
+    }
+  }
+}
