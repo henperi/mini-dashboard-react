@@ -1,0 +1,23 @@
+.row {
+  display: flex;
+  flex-direction: row;
+
+  &__crossAxis {
+    &--spaceBetween {
+      align-items: stretch;
+      height: inherit;
+    }
+    &--center {
+      align-items: center;
+      height: inherit;
+    }
+    &--start {
+      align-items: flex-start;
+      height: inherit;
+    }
+    &--end {
+      align-items: flex-end;
+      height: inherit;
+    }
+  }
+}

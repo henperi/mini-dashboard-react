@@ -1,0 +1,31 @@
+.col {
+  display: flex;
+  flex-direction: column;
+
+  &__mainAxis {
+    &--spaceBetween {
+      justify-content: space-between;
+      height: inherit;
+    }
+    &--spaceAround {
+      justify-content: space-around;
+      height: inherit;
+    }
+    &--spaceEvenly {
+      justify-content: space-evenly;
+      height: inherit;
+    }
+    &--start {
+      justify-content: start;
+      height: inherit;
+    }
+    &--end {
+      justify-content: flex-end;
+      height: inherit;
+    }
+    &--center {
+      justify-content: center;
+      height: inherit;
+    }
+  }
+}

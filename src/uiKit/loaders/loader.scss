@@ -1,0 +1,49 @@
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.spinner {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    position: absolute;
+    border: solid 3px #eee;
+    border-bottom-color: #3c30e6;
+    border-radius: 50%;
+    content: '';
+    height: inherit;
+    width: inherit;
+    animation: 2s linear infinite spinner;
+    will-change: animation;
+  }
+
+  &::after {
+    background-color: #3c30e6;
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    content: '';
+    border-radius: 50%;
+    animation: grow 600ms ease-in-out infinite alternate;
+    will-change: animation;
+  }
+}

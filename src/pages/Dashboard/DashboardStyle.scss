@@ -1,0 +1,32 @@
+@import '../../app.scss';
+
+.stack {
+  position: relative;
+  display: flex;
+
+  &__image {
+    margin-left: -10px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    background-color: salmon;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    font-size: 10px;
+    position: relative;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.calendar {
+  border: none;
+  .react-calendar {
+    border: none;
+    &__tile--active {
+      background-color: $primary;
+    }
+  }
+}
