@@ -1,5 +1,7 @@
 import React, { useRef, useEffect } from 'react';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import {
+  Route, Switch, BrowserRouter, Redirect,
+} from 'react-router-dom';
 import { useGlobalStore } from '../store';
 import { AppLoader } from '../uiKit/loaders/AppLoader';
 import { Row } from '../uiKit/Grid/Row';
@@ -27,7 +29,8 @@ export const Routes = () => {
         <BrowserRouter>
           <Sidebar forwardRef={sidebarRef} />
           <Switch>
-            <Route exact path="/" component={DashboardPage} />
+            <Route exact path="/" render={() => <Redirect to="/dashboard" />} />
+            <Route exact path="/dashboard" component={DashboardPage} />
           </Switch>
         </BrowserRouter>
       </Row>

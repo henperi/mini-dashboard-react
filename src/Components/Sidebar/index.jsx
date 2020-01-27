@@ -1,5 +1,6 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 import { Row } from '../../uiKit/Grid/Row';
 import { Column } from '../../uiKit/Grid/Column';
@@ -24,34 +25,34 @@ export const Sidebar = ({ forwardRef }) => (
         <img src={profileImage} alt="" />
       </Row>
       <Column>
-        <div className="icon__item icon__item--selected col col__crossAxis--center col__mainAxis--center">
+        <NavLink activeClassName="icon__item--selected" to="/dashboard" className="icon__item col col__crossAxis--center col__mainAxis--center">
           <div className="item-hover" />
-          <object className="svg" data={dashBoardSvg} type="image/svg+xml" aria-label="dashboard" />
-        </div>
-        <div className="icon__item col col__crossAxis--center col__mainAxis--center">
+          <img alt="" className="svg" src={dashBoardSvg} aria-label="dashboard" />
+        </NavLink>
+        <NavLink activeClassName="icon__item--selected" to="/inbox" className="icon__item col col__crossAxis--center col__mainAxis--center">
           <div className="item-hover" />
-          <object className="svg" data={inboxSvg} type="image/svg+xml" aria-label="inbox" />
-        </div>
-        <div className="icon__item col col__crossAxis--center col__mainAxis--center">
+          <img alt="" className="svg" src={inboxSvg} aria-label="inbox" />
+        </NavLink>
+        <NavLink activeClassName="icon__item--selected" to="/rewards" className="icon__item col col__crossAxis--center col__mainAxis--center">
           <div className="item-hover" />
-          <object className="svg" data={starSvg} type="image/svg+xml" aria-label="star" />
-        </div>
-        <div className="icon__item col col__crossAxis--center col__mainAxis--center">
+          <img alt="" className="svg" src={starSvg} aria-label="star" />
+        </NavLink>
+        <NavLink activeClassName="icon__item--selected" to="/cloud" className="icon__item col col__crossAxis--center col__mainAxis--center">
           <div className="item-hover" />
-          <object className="svg" data={cloudSvg} type="image/svg+xml" aria-label="cloud" />
-        </div>
-        <div className="icon__item col col__crossAxis--center col__mainAxis--center">
+          <img alt="" className="svg" src={cloudSvg} aria-label="cloud" />
+        </NavLink>
+        <NavLink activeClassName="icon__item--selected" to="/trash" className="icon__item col col__crossAxis--center col__mainAxis--center">
           <div className="item-hover" />
-          <object className="svg" data={binSvg} type="image/svg+xml" aria-label="bin" />
-        </div>
+          <img alt="" className="svg" src={binSvg} aria-label="bin" />
+        </NavLink>
       </Column>
     </div>
 
     <div className="sidebar-bottom">
-      <div className="icon__item col col__crossAxis--center col__mainAxis--center">
+      <NavLink activeClassName="icon__item--selected" to="/add" className="icon__item col col__crossAxis--center col__mainAxis--center">
         <div className="item-hover-default" />
-        <object className="svg" data={plusSvg} type="image/svg+xml" aria-label="plus" />
-      </div>
+        <img alt="" className="svg" src={plusSvg} aria-label="plus" />
+      </NavLink>
     </div>
   </div>
 );
